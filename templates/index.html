@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titanic Survival Rate Predictor</title>
+</head>
+<body>
+    <h1>Predict if the passenger has Survived from Titanic accident</h1>
+
+    <form action="{{ url_for('predict') }}" method="post">
+            <input type="text" name="pclass" placeholder="Pclass" required="required" /><br>
+            <input type="text" name="sex" placeholder="Sex" required="required" /><br>
+            <input type="text" name="fare" placeholder="Fare" required="required" /><br>
+            <input type="text" name="age_10-19" placeholder="age_10-19" required="required" /><br>
+            <input type="text" name="age_20-29" placeholder="age_20-29" required="required" /><br>
+            <input type="text" name="age_30-39" placeholder="age_30-39" required="required" /><br>
+            <input type="text" name="age_40-49" placeholder="age_40-49" required="required" /><br>
+            <input type="text" name="age_50-59" placeholder="age_50-59" required="required" /><br>
+            <input type="text" name="age_60-69" placeholder="age_60-69" required="required" /><br>
+            <input type="text" name="age_70-79" placeholder="age_70-79" required="required" /><br>
+            <input type="text" name="age_80-89" placeholder="age_80-89" required="required" /><br>
+            <input type="text" name="age_90-200" placeholder="age_90-200" required="required" /><br>
+            <br>
+            <br>
+            <button type="submit">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    {{ prediction_text }}
+
+</body>
+</html>
